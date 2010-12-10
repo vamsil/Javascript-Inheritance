@@ -24,15 +24,15 @@ Function.prototype.inheritsFrom = function(parentClassOrObject) {
           case "typeName":
           case "constructor":
             continue;
+          default:
+            this.prototype[parentPMemberIndex] = inheritanceTarget[parentPMemberIndex];
         }
-        
-        this.prototype[parentPMemberIndex] = inheritanceTarget[parentPMemberIndex];
       }
       
       this.prototype.inherits[parentClassOrObject.typeName()] = inheritanceTarget;
     }
   }
-}
+};
 
 Object.prototype.inheritsFrom = function(parentClassOrObject) {
   if (parentClassOrObject instanceof Object) {
@@ -43,4 +43,4 @@ Object.prototype.inheritsFrom = function(parentClassOrObject) {
       parentClassOrObject.apply(this, Array.prototype.slice.apply(arguments, [1]));
     }
   }
-}
+};
