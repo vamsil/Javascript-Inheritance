@@ -1,4 +1,4 @@
-// requires prototype.typeName.func.jscript
+// requires prototype.typeName.func.js
 
 Function.prototype.inheritsFrom = function(parentClassOrObject) {
   if (parentClassOrObject instanceof Object) {
