@@ -4,6 +4,5 @@ Function.prototype.typeName = function() {
 
 Object.prototype.typeName = function() {
  console.log(this.constructor.typeName());
-  return this.constructor.typeName(); 
-  
+  return this.constructor.typeName();
 };
